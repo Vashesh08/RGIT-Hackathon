@@ -1,8 +1,21 @@
 {% extends "base.html" %}
 {% block body %}
-    <form action="{{ url_for('login') }}" method="post">
-    <button class="button" id="usertype" type="submit" style="vertical-align:middle">User</button>
-    <button class="button" id="usertype" type="submit" style="vertical-align:middle">Admin</button>
-    </form>
+    <img src="{{url_for('static', filename='helpdesk_icon.jpg')}}">
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div style="color: red;
+    background-color: #d1e7dd;
+    border-color: #badbcc; display: block;">
+        <strong>{{ message }}</strong>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
 
+    <form action="{{ url_for('home') }}" method="post">
+    <button class="button" name="usertype" value="user" type="submit" style="vertical-align:middle">User</button>
+    <button class="button" name="usertype" value="admin" type="submit" style="vertical-align:middle">Admin</button>
+    </form>
 {% endblock %}
