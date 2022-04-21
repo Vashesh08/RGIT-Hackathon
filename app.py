@@ -5,7 +5,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template('index.html')
+    file = 'backg.jpeg'
+    return render_template('index.html', file=file)
 
 
 @app.route("/login", methods=['POST', 'GET'])
