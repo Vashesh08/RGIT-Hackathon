@@ -3,6 +3,10 @@ Hackathon Rajiv Gandhi Institute Of Technology
 
 Contributors-
 
-Manav
+Manav Sanghvi
 
-Jainam
+Jainam Nisar
+
+Aayushi Chauhan
+
+Vashesh Jogani
